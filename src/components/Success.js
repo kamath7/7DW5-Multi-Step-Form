@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-
+import {sendEmail} from '../email';
 
 export class Success extends Component {
     continue = e=>{
         e.preventDefault();
         this.props.nextStep();
     }
-    render() {    
+    
+    render() {  
+        const {values} = this.props;
+        sendEmail(values.email,values);
         return (
             <MuiThemeProvider>
                 <React.Fragment>
