@@ -2,6 +2,10 @@
   "name": "multi-form",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.11.3",
+    "yarn": "1.21.1"
+  },
   "dependencies": {
     "@sendgrid/mail": "^7.0.1",
     "@testing-library/jest-dom": "^4.2.4",
